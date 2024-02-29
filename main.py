@@ -11,21 +11,18 @@ running = True
 deck = poker.Deck()
 deck.shuffle()
 print(deck)
-print(len(deck))
+#print(len(deck))
 
-p1 = Player()
-p2 = Player()
-p3 = Player()
+players = [Player(), Player(), Player()]
 dealer = poker.Dealer(deck)
-print("***********************************")
-dealer.distribute(p1)
-dealer.distribute(p2)
-dealer.distribute(p3)
-p1.printHand()
-p2.printHand()
-p3.printHand()
-
-print(deck)
+#dealer.distribute(players[0])
+#dealer.distribute(players[1])
+#dealer.distribute(players[2])
+print("*********HANDS*****************")
+dealer.distribute(players)
+players[0].printHand()
+players[1].printHand()
+players[2].printHand()
 
 while running:
     for event in pygame.event.get():

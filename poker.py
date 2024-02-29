@@ -38,7 +38,8 @@ class Dealer(object):
         self.deck = deck
 
     # TODO: get players' list -> distribute one by one.
-    def distribute(self, player : Player):
+    def distribute(self, players : list):
         for i in range (2):
-            if len(self.deck) is not 0:
-                player.hand.append(self.deck.deck.pop(0))
+            for p in players:
+                if len(self.deck) is not 0:
+                    p.hand.append(self.deck.deck.pop(0))
